@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h1><span></span></h1>
+            </div>
+            <div class="controls" style="display:flex; gap:1rem; align-items: center;">
+                <select id="loc-select" class="dropdown" multiple style="height: 80px; padding: 5px;">
+                    <option value="A" selected>Destination A</option>
+                    <option value="B">Destination B</option>
+                    <option value="C">Destination C</option>
+                </select>
+                <button id="run-btn" class="primary-btn">
+                    <i class="fa-solid fa-route"></i> Calculate Route
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard" style="grid-template-columns: 1fr; grid-template-areas: 'map' 'schedule';">
+            <div class="glass-panel panel-map">
+                <h2><i class="fa-solid fa-map-location-dot"></i> Routing Grid (A*)</h2>
+                <div id="map-grid" class="grid-container">
+                    <div class="placeholder"><i class="fa-solid fa-spinner fa-spin"></i> Awaiting computing...</div>
+                </div>
+                <div id="path-info" class="path-info"></div>
+            </div>
+
+            <div class="glass-panel panel-schedule">
+                <h2><i class="fa-solid fa-id-card-clip"></i> Assigned Task</h2>
+                <div id="schedule-container" class="schedule">
+                    <div class="placeholder"><i class="fa-solid fa-spinner fa-spin"></i> Awaiting computing...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
